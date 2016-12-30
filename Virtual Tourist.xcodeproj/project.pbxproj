@@ -15,6 +15,12 @@
 		C509CFE71E139D23004483CB /* Virtual_TouristTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509CFE61E139D23004483CB /* Virtual_TouristTests.swift */; };
 		C509CFF21E139D23004483CB /* Virtual_TouristUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509CFF11E139D23004483CB /* Virtual_TouristUITests.swift */; };
 		C509D0041E139F0A004483CB /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C509D0021E139F0A004483CB /* CoreDataModel.xcdatamodeld */; };
+		C509D03D1E1419FD004483CB /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0391E1419FD004483CB /* Pin+CoreDataClass.swift */; };
+		C509D03E1E1419FD004483CB /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D03A1E1419FD004483CB /* Pin+CoreDataProperties.swift */; };
+		C509D03F1E1419FD004483CB /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D03B1E1419FD004483CB /* Photo+CoreDataClass.swift */; };
+		C509D0401E1419FD004483CB /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D03C1E1419FD004483CB /* Photo+CoreDataProperties.swift */; };
+		C509D0421E141D63004483CB /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0411E141D63004483CB /* CoreDataModel.swift */; };
+		C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0431E141F26004483CB /* CoreDataClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		C509CFF11E139D23004483CB /* Virtual_TouristUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virtual_TouristUITests.swift; sourceTree = "<group>"; };
 		C509CFF31E139D23004483CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C509D0031E139F0A004483CB /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		C509D0391E1419FD004483CB /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C509D03A1E1419FD004483CB /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C509D03B1E1419FD004483CB /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C509D03C1E1419FD004483CB /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C509D0411E141D63004483CB /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		C509D0431E141F26004483CB /* CoreDataClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,10 @@
 		C509CFC51E139D22004483CB = {
 			isa = PBXGroup;
 			children = (
+				C509D0391E1419FD004483CB /* Pin+CoreDataClass.swift */,
+				C509D03A1E1419FD004483CB /* Pin+CoreDataProperties.swift */,
+				C509D03B1E1419FD004483CB /* Photo+CoreDataClass.swift */,
+				C509D03C1E1419FD004483CB /* Photo+CoreDataProperties.swift */,
 				C509CFD01E139D22004483CB /* Virtual Tourist */,
 				C509CFE51E139D23004483CB /* Virtual TouristTests */,
 				C509CFF01E139D23004483CB /* Virtual TouristUITests */,
@@ -133,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				C509D0021E139F0A004483CB /* CoreDataModel.xcdatamodeld */,
+				C509D0411E141D63004483CB /* CoreDataModel.swift */,
+				C509D0431E141F26004483CB /* CoreDataClient.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,8 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C509D0401E1419FD004483CB /* Photo+CoreDataProperties.swift in Sources */,
+				C509D03F1E1419FD004483CB /* Photo+CoreDataClass.swift in Sources */,
+				C509D0421E141D63004483CB /* CoreDataModel.swift in Sources */,
 				C509CFD41E139D23004483CB /* MapViewController.swift in Sources */,
+				C509D03D1E1419FD004483CB /* Pin+CoreDataClass.swift in Sources */,
 				C509CFD21E139D23004483CB /* AppDelegate.swift in Sources */,
+				C509D03E1E1419FD004483CB /* Pin+CoreDataProperties.swift in Sources */,
+				C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */,
 				C509D0041E139F0A004483CB /* CoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +469,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5Z7V5R3L58;
 				INFOPLIST_FILE = "Virtual Tourist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ashishrsai.Virtual-Tourist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5Z7V5R3L58;
 				INFOPLIST_FILE = "Virtual Tourist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ashishrsai.Virtual-Tourist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,6 +568,7 @@
 				C509CFF81E139D23004483CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C509CFF91E139D23004483CB /* Build configuration list for PBXNativeTarget "Virtual TouristTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +577,7 @@
 				C509CFFB1E139D23004483CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C509CFFC1E139D23004483CB /* Build configuration list for PBXNativeTarget "Virtual TouristUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +586,7 @@
 				C509CFFE1E139D23004483CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

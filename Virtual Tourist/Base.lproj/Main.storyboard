@@ -51,6 +51,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Virtual Tourist" id="fbD-Sm-D4b"/>
+                    <connections>
+                        <outlet property="mapView" destination="fRe-LK-4yw" id="Z1L-V9-LJJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5M-mA-fna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
