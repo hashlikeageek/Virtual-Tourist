@@ -53,11 +53,42 @@
                     <navigationItem key="navigationItem" title="Virtual Tourist" id="fbD-Sm-D4b"/>
                     <connections>
                         <outlet property="mapView" destination="fRe-LK-4yw" id="Z1L-V9-LJJ"/>
+                        <segue destination="ld8-3V-rKK" kind="show" identifier="showImage" id="e3r-nb-47b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5M-mA-fna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="194.75262368815595"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="aZD-MX-ynP">
+            <objects>
+                <viewController storyboardIdentifier="imageVC" id="ld8-3V-rKK" customClass="imageViewController" customModule="Virtual_Tourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xax-of-7Ae"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bx2-nx-hUb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KFz-d2-6a6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuX-EA-Be3">
+                                <rect key="frame" x="23" y="175" width="274" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="QuX-EA-Be3" id="Xr5-sv-Ebo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cy-U2-xzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="202.84857571214394"/>
         </scene>
     </scenes>
 </document>

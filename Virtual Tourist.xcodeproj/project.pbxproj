@@ -21,6 +21,7 @@
 		C509D0401E1419FD004483CB /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D03C1E1419FD004483CB /* Photo+CoreDataProperties.swift */; };
 		C509D0421E141D63004483CB /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0411E141D63004483CB /* CoreDataModel.swift */; };
 		C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0431E141F26004483CB /* CoreDataClient.swift */; };
+		C509D0461E17726A004483CB /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0451E17726A004483CB /* imageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C509D03C1E1419FD004483CB /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C509D0411E141D63004483CB /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		C509D0431E141F26004483CB /* CoreDataClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataClient.swift; sourceTree = "<group>"; };
+		C509D0451E17726A004483CB /* imageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C509CFD31E139D23004483CB /* MapViewController.swift */,
+				C509D0451E17726A004483CB /* imageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				C509CFD21E139D23004483CB /* AppDelegate.swift in Sources */,
 				C509D03E1E1419FD004483CB /* Pin+CoreDataProperties.swift in Sources */,
 				C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */,
+				C509D0461E17726A004483CB /* imageViewController.swift in Sources */,
 				C509D0041E139F0A004483CB /* CoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
