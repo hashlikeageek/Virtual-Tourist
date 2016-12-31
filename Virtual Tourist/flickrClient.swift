@@ -10,7 +10,7 @@ import Foundation
 
 class flickrClient : NSObject
 {
-    func searchByLatLon(lat:Double, lon: Double) {
+    func searchByLatLon(lat:Double, lon: Double,completionHandler: @escaping(_ results: [String]?)-> Void) {
         
             let methodParameters = [
                 flickrConstant.FlickrParameterKeys.Method: flickrConstant.FlickrParameterValues.SearchMethod,
@@ -24,17 +24,8 @@ class flickrClient : NSObject
                 flickrConstant.FlickrParameterKeys.NoJSONCallback: flickrConstant.FlickrParameterValues.DisableJSONCallback
             ]
         
-        displayImageFromFlickrBySearch(methodParameters as [String:AnyObject])
-        }
-    
-    
-
-    
-    private func displayImageFromFlickrBySearch(_ methodParameters: [String: AnyObject]) {
-        
-        
         let session = URLSession.shared
-        let request = URLRequest(url: flickrURLFromParameters(methodParameters))
+        let request = URLRequest(url: flickrURLFromParameters(methodParameters as [String : AnyObject]))
         
         let task = session.dataTask(with: request) { (data, response, error) in
             
@@ -87,16 +78,38 @@ class flickrClient : NSObject
             
             print(photosDictionary)
             
-            /* GUARD: Is "pages" key in the photosDictionary? */
-            guard let totalPages = photosDictionary[flickrConstant.FlickrResponseKeys.Pages] as? Int else {
-                displayError("Cannot find key '\(flickrConstant.FlickrResponseKeys.Pages)' in \(photosDictionary)")
+            guard let photo = photosDictionary[flickrConstant.FlickrResponseKeys.Photo] as? [[String:AnyObject]] else {
+                print("Photo dictionary is nil")
                 return
             }
+            
+            var URLs = [String]()
+            
+            for url in photo {
+                guard let urlString = url[flickrConstant.FlickrResponseKeys.MediumURL] as? String else {
+                    
+                    print("no medium url in the dictionary")
+                    return
+                }
+                URLs.append(urlString)
+                print(URLs)
+                
+            }
+            completionHandler(URLs)
         }
         
-        // start the task!
-        task.resume()
-  
+        
+        
+
+        }
+    
+    
+
+    
+    private func displayImageFromFlickrBySearch(_ methodParameters: [String: AnyObject]) {
+        
+        
+        
 }
 
 private func flickrURLFromParameters(_ parameters: [String:AnyObject]) -> URL {

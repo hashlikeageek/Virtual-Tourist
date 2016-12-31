@@ -59,6 +59,42 @@ class CoreDataClient {
         
     }
     
+    // lets deal with photos
+    
+    func photoObj(urlString:String, pin:Pin) ->Photo{
+        let photo = Photo(context: stack.context)
+        photo.url = urlString
+        pin.addToPhoto(photo)
+        return photo
+    }
+    
+    func loadPhoto(_ selectedPin: Pin) -> [Photo]{
+        
+        let photoRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        photoRequest.predicate = NSPredicate(format: "pin = %@", selectedPin)
+        
+        let photos = try! context.fetch(photoRequest) as! [Photo]
+         return photos
+    }
+
+    func selectPin(_ lat:Double, lon:Double) -> Pin?{
+        let pinRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
+        
+        pinRequest.predicate = NSPredicate(format: "lat = %lf AND lon = %lf", lat, lon)
+        
+         let pins = try? context.fetch(pinRequest) as! [Pin]
+        
+            if pins?.count == 1{
+                return pins?[0]
+            } else {
+                print("Error in selecting pin")
+            }
+        
+        return nil
+        
+    }
+
+    
     
         class func sharedInstance() -> CoreDataClient {
         struct Singleton {
