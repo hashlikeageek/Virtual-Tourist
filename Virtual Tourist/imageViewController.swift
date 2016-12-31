@@ -23,6 +23,7 @@ class imageViewController : UIViewController, MKMapViewDelegate
         mapView.delegate = self
         centerMapOnLocation(location: initialLocation)
         addpin()
+        flickrClient.sharedInstance().searchByLatLon(lat: passedCordinates.latitude, lon: passedCordinates.longitude)
            }
     
     let regionRadius: CLLocationDistance = 1000

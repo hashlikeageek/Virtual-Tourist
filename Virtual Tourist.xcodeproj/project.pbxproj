@@ -22,6 +22,9 @@
 		C509D0421E141D63004483CB /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0411E141D63004483CB /* CoreDataModel.swift */; };
 		C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0431E141F26004483CB /* CoreDataClient.swift */; };
 		C509D0461E17726A004483CB /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0451E17726A004483CB /* imageViewController.swift */; };
+		C509D0481E179791004483CB /* flickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0471E179791004483CB /* flickrClient.swift */; };
+		C509D04A1E1797A2004483CB /* flickrConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0491E1797A2004483CB /* flickrConstant.swift */; };
+		C509D04C1E179E48004483CB /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D04B1E179E48004483CB /* GCDBlackBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		C509D0411E141D63004483CB /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		C509D0431E141F26004483CB /* CoreDataClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataClient.swift; sourceTree = "<group>"; };
 		C509D0451E17726A004483CB /* imageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
+		C509D0471E179791004483CB /* flickrClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrClient.swift; sourceTree = "<group>"; };
+		C509D0491E1797A2004483CB /* flickrConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrConstant.swift; sourceTree = "<group>"; };
+		C509D04B1E179E48004483CB /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,9 @@
 				C509D0021E139F0A004483CB /* CoreDataModel.xcdatamodeld */,
 				C509D0411E141D63004483CB /* CoreDataModel.swift */,
 				C509D0431E141F26004483CB /* CoreDataClient.swift */,
+				C509D04B1E179E48004483CB /* GCDBlackBox.swift */,
+				C509D0471E179791004483CB /* flickrClient.swift */,
+				C509D0491E1797A2004483CB /* flickrConstant.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -318,8 +327,11 @@
 				C509CFD21E139D23004483CB /* AppDelegate.swift in Sources */,
 				C509D03E1E1419FD004483CB /* Pin+CoreDataProperties.swift in Sources */,
 				C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */,
+				C509D04A1E1797A2004483CB /* flickrConstant.swift in Sources */,
 				C509D0461E17726A004483CB /* imageViewController.swift in Sources */,
+				C509D0481E179791004483CB /* flickrClient.swift in Sources */,
 				C509D0041E139F0A004483CB /* CoreDataModel.xcdatamodeld in Sources */,
+				C509D04C1E179E48004483CB /* GCDBlackBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
