@@ -80,7 +80,7 @@ class CoreDataClient {
     func selectPin(_ lat:Double, lon:Double) -> Pin?{
         let pinRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
         
-        pinRequest.predicate = NSPredicate(format: "lat = %lf AND lon = %lf", lat, lon)
+        pinRequest.predicate = NSPredicate(format: "latitude = %lf AND longitude = %lf", lat, lon)
         
          let pins = try? context.fetch(pinRequest) as! [Pin]
         
@@ -93,6 +93,44 @@ class CoreDataClient {
         return nil
         
     }
+    
+    func NewPhotoObj(urlString:String, selectedPin:Pin) ->Photo{
+        let photo = Photo(context: stack.context)
+        photo.url = urlString
+        selectedPin.addToPhoto(photo)
+        return photo
+    }
+    
+    
+    func deleteAllPhotosForPin(_ selectedPin: Pin){
+        let photos = loadPhoto(selectedPin)
+        for photo in photos{
+            context.delete(photo)
+        }
+        do{
+            try stack.context.save()
+        }
+        catch
+        {
+            print("error in saving context")
+        }
+
+    }
+    
+    func deletePhotos(_ photos: [Photo]){
+        for photo in photos{
+            context.delete(photo)
+        }
+        do{
+            try stack.context.save()
+        }
+        catch
+        {
+            print("error in saving context")
+        }
+
+    }
+
 
     
     

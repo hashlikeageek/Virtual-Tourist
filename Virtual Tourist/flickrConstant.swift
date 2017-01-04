@@ -38,6 +38,7 @@ struct flickrConstant {
         static let Lat = "lat"
         static let Lon = "lon"
         static let Page = "page"
+        static let PerPage = "per_page"
     }
     
     // MARK: Flickr Parameter Values

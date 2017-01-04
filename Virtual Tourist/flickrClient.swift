@@ -10,14 +10,15 @@ import Foundation
 
 class flickrClient : NSObject
 {
-    func searchByLatLon(lat:Double, lon: Double,completionHandler: @escaping(_ results: [String]?)-> Void) {
+    func searchByLatLon(lat:Double, lon: Double,page: Int,completionHandler: @escaping(_ results: [String]?)-> Void) {
         
             let methodParameters = [
                 flickrConstant.FlickrParameterKeys.Method: flickrConstant.FlickrParameterValues.SearchMethod,
                 flickrConstant.FlickrParameterKeys.APIKey: flickrConstant.FlickrParameterValues.APIKey,
                 flickrConstant.FlickrParameterKeys.Lat : "\(lat)",
                 flickrConstant.FlickrParameterKeys.Lon: "\(lon)",
-              
+                flickrConstant.FlickrParameterKeys.Page: "\(page)",
+               flickrConstant.FlickrParameterKeys.PerPage: "10",
                 flickrConstant.FlickrParameterKeys.SafeSearch: flickrConstant.FlickrParameterValues.UseSafeSearch,
                 flickrConstant.FlickrParameterKeys.Extras: flickrConstant.FlickrParameterValues.MediumURL,
                 flickrConstant.FlickrParameterKeys.Format: flickrConstant.FlickrParameterValues.ResponseFormat,
@@ -97,20 +98,9 @@ class flickrClient : NSObject
             }
             completionHandler(URLs)
         }
-        
-        
-        
-
         }
     
     
-
-    
-    private func displayImageFromFlickrBySearch(_ methodParameters: [String: AnyObject]) {
-        
-        
-        
-}
 
 private func flickrURLFromParameters(_ parameters: [String:AnyObject]) -> URL {
     
@@ -128,13 +118,32 @@ private func flickrURLFromParameters(_ parameters: [String:AnyObject]) -> URL {
     return components.url!
 }
     
+    
+    func downloadImage(url: String, completionHandler:@escaping (_ imageData: Data?)->Void){
+        
+       let url = URL(string: url)
+        
+            do {
+                let imgData = try Data(contentsOf: url!)
+                DispatchQueue.main.async(){
+                    completionHandler(imgData)
+                }
+            } catch {
+                print("Could not get image Data")
+            }
+        }
+    
+
+    
+    
+    
     class func sharedInstance() -> flickrClient {
         struct Singleton {
             static var sharedInstance = flickrClient()
         }
         return Singleton.sharedInstance
 }
-}
 
+}
 
 

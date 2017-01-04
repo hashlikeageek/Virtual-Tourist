@@ -25,6 +25,7 @@
 		C509D0481E179791004483CB /* flickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0471E179791004483CB /* flickrClient.swift */; };
 		C509D04A1E1797A2004483CB /* flickrConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D0491E1797A2004483CB /* flickrConstant.swift */; };
 		C509D04C1E179E48004483CB /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D04B1E179E48004483CB /* GCDBlackBox.swift */; };
+		C5B729A01E1CADE500C52850 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B7299F1E1CADE500C52850 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C509D0471E179791004483CB /* flickrClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrClient.swift; sourceTree = "<group>"; };
 		C509D0491E1797A2004483CB /* flickrConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrConstant.swift; sourceTree = "<group>"; };
 		C509D04B1E179E48004483CB /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		C5B7299F1E1CADE500C52850 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		C509D0001E139EE7004483CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C5B7299F1E1CADE500C52850 /* CollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				C509D0441E141F26004483CB /* CoreDataClient.swift in Sources */,
 				C509D04A1E1797A2004483CB /* flickrConstant.swift in Sources */,
 				C509D0461E17726A004483CB /* imageViewController.swift in Sources */,
+				C5B729A01E1CADE500C52850 /* CollectionViewCell.swift in Sources */,
 				C509D0481E179791004483CB /* flickrClient.swift in Sources */,
 				C509D0041E139F0A004483CB /* CoreDataModel.xcdatamodeld in Sources */,
 				C509D04C1E179E48004483CB /* GCDBlackBox.swift in Sources */,
